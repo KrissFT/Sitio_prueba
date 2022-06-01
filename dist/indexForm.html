@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/form.css">
+    <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+</head>
+<body>
+    <h1>Nuevo socio</h1>
+    <form action="action_page.php">
+      <div class="container">
+          <h2>Datos básicos</h2>
+            <div class="row">
+              <div class="col-15">
+                <label for="nom">Nombre:</label>
+              </div>
+              <div class="col-35">
+                <input type="text" id="nom" name="nombre">
+              </div>
+              <div class="col-15">
+                <label for="apell">Apellido:</label>
+              </div>
+              <div class="col-35">
+                <input type="text" id="apell" name="apellido">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-15">
+                  <label for="fech">Fecha de nacimiento:</label>
+              </div>
+              <div class="col-35">
+                  <input type="text" id="fech" name="fechadenac">
+              </div>
+              <div class="col-15">
+                <label for="subject">Documento:</label>
+              </div>
+              <div class="col-35">
+                <input type="text" id="doc" name="documento"></textarea>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-15">
+                <label for="esc">Escuela:</label>
+              </div>
+              <div class="col-35">
+                <input type="text" id="esc" name="escuela">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-15">
+                <label for="carr">Carrera</label>
+              </div>
+              <div class="col-35">
+                <select id="carr" name="carrera">
+                  <option value="op3d">3D</option>
+                  <option value="diseño">Diseño</option>
+                  <option value="programacion">Programación</option>
+                </select>
+              </div>
+            </div>
+      </div>
+      <br>
+      <div class="container">
+        <h2>Información de padre, madre o tutor</h2>
+          <div class="row">
+            <div class="col-15">
+                <label for="nomres">Nombre:</label>
+            </div>
+            <div class="col-35">
+                <input type="text" id="nomres" name="nombreResponsable">
+            </div>
+            <div class="col-15">
+              <label for="apellres">Apellido:</label>
+            </div>
+            <div class="col-35">
+              <input type="text" id="apellres" name="apellidoResponsable">
+            </div>
+          </div>
+          <div class="row">
+              <div class="col-15">
+                  <label for="contres">Contacto:</label>
+              </div>
+              <div class="col-35">
+                  <input type="text" id="contres" name="contacto">
+              </div>
+              <div class="col-15">
+                  <label for="telres">Teléfono:</label>
+              </div>
+              <div class="col-35">
+                  <input type="text" id="telres" name="telefonoResonsable">
+              </div>
+          </div>
+      </div>
+          <br>
+      <div class="container">
+        <h2>Contacto</h2>
+        <div class="row">
+          <div class="col-15">
+            <label for="tel">Teléfono:</label>
+          </div>
+          <div class="col-35">
+            <input type="text" id="tel" name="telefono">
+          </div>
+          <div class="col-15">
+            <label for="email">Email:</label>
+          </div>
+          <div class="col-35">
+            <input type="text" id="email" name="correo">
+          </div>
+        </div>
+          <div class="row">
+          <div class="col-15">
+            <label for="cel">Celular:</label>
+          </div>
+          <div class="col-35">
+            <input type="text" id="cel" name="celular">
+          </div>
+          <div class="col-15">
+            <label for="compcel">Compañía de celular:</label>
+          </div>
+          <div class="col-35">
+            <select id="compcel" name="compañiaCelular">
+              <option value="claro">Claro</option>
+              <option value="personal">Personal</option>
+              <option value="movistar">Movistar</option>
+              <option value="tuenti">Tuenti</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="container">
+        <h2>Domicilio</h2>
+        <div class="row">
+          <div class="col-15">
+            <label for="direc">Dirección:</label>
+          </div>
+          <div class="col-35">
+            <input type="text" id="direc" name="direccion">
+          </div>
+          <div class="col-15">
+            <label for="barr">Barrio:</label>
+          </div>
+          <div class="col-35">
+            <select name="barrio" id="barr">
+              <option value="3deFebrero">3 de Febrero</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-15">
+            <label for="local">Localidad:</label>
+          </div>
+          <div class="col-35">
+            <input type="text" id="local" name="localidad">
+          </div>
+        </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="container">
+        <h2>Intereses</h2>
+        <div class="row">
+          <div class="col-25">
+            <label class="container-check">3D
+              <input type="checkbox" name="3d" id="3d">
+              <span class="checkmark"></span>
+            </label>
+          </div>
+          <div class="col-25">
+            <label class="container-check">Animación
+              <input type="checkbox" name="animacion" id="anima">
+              <span class="checkmark"></span>
+            </label>
+          </div>
+          <div class="col-25">
+            <label class="container-check">Audio y producción musical
+              <input type="checkbox" name="audioProduccion" id="aupro">
+              <span class="checkmark"></span>
+            </label>
+          </div>
+          <div class="col-25">
+            <label class="container-check">Dibujo
+              <input type="checkbox" name="dibujo" id="dibu">
+              <span class="checkmark"></span>
+            </label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label class="container-check">Graffiti / muralismo
+              <input type="checkbox" name="graffitiMuralismo" id="graf">
+              <span class="checkmark"></span>
+            </label>
+          </div>
+          <div class="col-25">
+            <label class="container-check">3D
+              <input type="checkbox" name="3d" id="3d">
+              <span class="checkmark"></span>
+            </label>
+          </div>
+          <div class="col-25">
+            <label class="container-check">3D
+              <input type="checkbox" name="3d" id="3d">
+              <span class="checkmark"></span>
+            </label>
+          </div>
+          <div class="col-25">
+            <label class="container-check">3D
+              <input type="checkbox" name="3d" id="3d">
+              <span class="checkmark"></span>
+            </label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label class="container-check">3D
+              <input type="checkbox" name="3d" id="3d">
+              <span class="checkmark"></span>
+            </label>
+          </div>
+          <div class="col-25">
+            <label class="container-check">3D
+              <input type="checkbox" name="3d" id="3d">
+              <span class="checkmark"></span>
+            </label>
+          </div>
+          <div class="col-25">
+            <label class="container-check">3D
+              <input type="checkbox" name="3d" id="3d">
+              <span class="checkmark"></span>
+            </label>
+          </div>
+          <div class="col-25">
+            <label class="container-check">3D
+              <input type="checkbox" name="3d" id="3d">
+              <span class="checkmark"></span>
+            </label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label class="container-check">3D
+              <input type="checkbox" name="3d" id="3d">
+              <span class="checkmark"></span>
+            </label>
+          </div>
+          <div class="col-25">
+            <label class="container-check">3D
+              <input type="checkbox" name="3d" id="3d">
+              <span class="checkmark"></span>
+            </label>
+          </div>
+          <div class="col-25">
+            <label class="container-check">3D
+              <input type="checkbox" name="3d" id="3d">
+              <span class="checkmark"></span>
+            </label>
+          </div>
+          <div class="col-25">
+            <label class="container-check">3D
+              <input type="checkbox" name="3d" id="3d">
+              <span class="checkmark"></span>
+            </label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label class="container-check">3D
+              <input type="checkbox" name="" id="">
+              <span class="checkmark"></span>
+            </label>
+          </div>
+          <div class="col-25">
+            <input type="text" id="" name="">
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="container">
+        <h2>Favoritos</h2>
+        <div class="row">
+          <div class="col-15">
+            <label for="mater">Materia del colegio:</label>
+          </div>
+          <div class="col-25">
+            <textarea name="materia" id="mater" style="height:100px"></textarea>
+          </div>
+          <div class="col-15">
+          </div>
+          <div class="col-25">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-15">
+            <label for=progtv">Programas de TV:</label>
+          </div>
+          <div class="col-25">
+            <textarea name="programas" id="progtv" style="height:100px"></textarea>
+          </div>
+          <div class="col-15">
+          </div>
+          <div class="col-25">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-15">
+          </div>
+          <div class="col-25">
+          </div>
+        </div>
+        <div class="col-15">
+        </div>
+        <div class="col-25">
+        </div>
+      </div>
+          <div class="row">
+            <input type="submit" value="Submit">
+          </div>
+        </form>
+      </div>
+    </div>
+</body>
+</html>

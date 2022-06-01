@@ -139,7 +139,7 @@
         <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
-        <form>
+        <form method="get">
           <!-- columna izquierda -->
           <div class="col-10">
             <!-- general form elements -->
@@ -160,7 +160,7 @@
                     <div class="row">
                       <div class="col-4">
                         <label for="nick">Nickname</label>
-                        <input type="text" class="form-control" id="name" name="nickname" placeholder="Nickname">
+                        <input type="text" class="form-control" id="nick" name="nickname" placeholder="Nickname">
                       </div>
                       <div class="col-4">
                         <label for="dni">D.N.I</label>
@@ -271,20 +271,20 @@
               <div class="card-body">
                 <div class="row">
                   <div class="col-8">
-                    <label for="exampleschool">Escuela</label>
-                    <input type="name" class="form-control" id="exampleschool" placeholder="Escuela">
+                    <label for="esc">Escuela</label>
+                    <input type="name" class="form-control" id="esc" name="escuela" placeholder="Escuela">
                   </div>
               </div>
               <div class="row">
                 <div class="col-sm-6">
                   <div class="form-group">
-                    <label>Seleccionar Carrera</label>
-                    <select class="form-control">
-                      <option>Programación</option>
-                      <option>3D</option>
-                      <option>Fotografía</option>
-                      <option>Diseño</option>
-                      <option>Robótica</option>
+                    <label for="carr">Seleccionar Carrera</label>
+                    <select class="form-control" id="carr" name="carrera">
+                      <option value="prog">Programación</option>
+                      <option value="3D">3D</option>
+                      <option value="foto">Fotografía</option>
+                      <option value="disñ">Diseño</option>
+                      <option value="robot">Robótica</option>
                     </select>
                   </div>
                 </div>
@@ -301,8 +301,8 @@
               <div class="card-body">
                 <div class="row">
                   <div class="col-8">
-                    <label for="exampleTutor">Nombre y apellido del tutor</label>
-                    <input type="name" class="form-control" id="exampleTutor" placeholder="Nombre y apellido">
+                    <label for="nomtutor">Nombre y apellido del tutor</label>
+                    <input type="text" class="form-control" id="exampleTutor" placeholder="Nombre y apellido">
                   </div>
                 </div>
                 <div class="card-body">

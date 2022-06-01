@@ -152,33 +152,33 @@
                 <div class="card-body">
                   <div class="row">
                     <div class="col-8">
-                      <label for="examplePersonal">Nombre y apellido</label>
-                      <input type="name" class="form-control" id="examplePersonal" placeholder="Nombre y apellido">
+                      <label for="nombreApellido">Nombre y apellido</label>
+                      <input type="text" class="form-control" id="nombreApellido" name="nombreyapellido" placeholder="Nombre y apellido">
                     </div>
                   </div>
                   <div class="card-body">
                     <div class="row">
                       <div class="col-4">
-                        <label>Nickname</label>
-                        <input type="text" class="form-control" placeholder="Nickname">
+                        <label for="nick">Nickname</label>
+                        <input type="text" class="form-control" id="name" name="nickname" placeholder="Nickname">
                       </div>
                       <div class="col-4">
-                        <label>D.N.I</label>
-                        <input type="text" class="form-control" placeholder="D.N.I">
+                        <label for="dni">D.N.I</label>
+                        <input type="text" class="form-control" id="dni" name="documento" placeholder="D.N.I">
                       </div>
                     </div>
                   </div>
                   <div class="card-body">
                     <div class="row">
                       <div class="col-4">
-                        <label>Fecha de nacimiento:</label>
+                        <label for="fechaNac">Fecha de nacimiento:</label>
                         <div class="input-group">
                           <div class="input-group-prepend">
                             <span class="input-group-text">
                               <i class="far fa-calendar-alt"></i>
                             </span>
                           </div>
-                          <input type="date" id="start" name="trip-start">
+                          <input type="date" id="start" name="trip-start" id="fechaNac" name="fechaDeNacimiento">
                         </div>
                       </div>
                       <div class="col-4">
@@ -269,9 +269,11 @@
                 <h3 class="card-title">Estudios</h3>
               </div>
               <div class="card-body">
-                <div class="form-group">
-                  <label for="exampleschool">Escuela</label>
-                  <input type="name" class="form-control" id="exampleschool" placeholder="Escuela">
+                <div class="row">
+                  <div class="col-8">
+                    <label for="exampleschool">Escuela</label>
+                    <input type="name" class="form-control" id="exampleschool" placeholder="Escuela">
+                  </div>
               </div>
               <div class="row">
                 <div class="col-sm-6">
@@ -297,9 +299,11 @@
               <h3 class="card-title">Datos de tutor</h3>
             </div>
               <div class="card-body">
-                <div class="form-group">
-                  <label for="exampleTutor">Nombre y apellido del tutor</label>
-                  <input type="name" class="form-control" id="exampleTutor" placeholder="Nombre y apellido">
+                <div class="row">
+                  <div class="col-8">
+                    <label for="exampleTutor">Nombre y apellido del tutor</label>
+                    <input type="name" class="form-control" id="exampleTutor" placeholder="Nombre y apellido">
+                  </div>
                 </div>
                 <div class="card-body">
                   <div class="row">
@@ -348,7 +352,7 @@
   
   <!-- /.content-wrapper -->
   <footer class="main-footer">
-    <strong>Copyright &copy; 2007-2022 <a href="https://adminlte.io">PuertaWeb.com.ar</a>.</strong>
+    <strong>Copyright &copy; 2022 <a href="https://adminlte.io">WebPrueba.com.ar</a>.</strong>
     Todos los derechos reservados.
     <div class="float-right d-none d-sm-inline-block">
       <b>Version</b> 0.1.0 (beta)

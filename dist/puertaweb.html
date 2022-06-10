@@ -149,20 +149,24 @@
               <!-- form datos personales -->
                 <div class="card-body">
                   <div class="row">
-                    <div class="col-8">
-                      <label for="nombreApellido">Nombre y apellido</label>
-                      <input type="text" class="form-control" id="nombreApellido" name="nombreyapellido" placeholder="Nombre y apellido">
+                    <div class="col-4">
+                      <label for="nombre">Nombre</label>
+                      <input type="text" class="form-control" id="nombre" name="nombre">
+                    </div>
+                    <div class="col-4">
+                      <label for="apellido">Apellido</label>
+                      <input type="text" class="form-control" id="apellido" name="apellido">
                     </div>
                   </div>
                   <div class="card-body">
                     <div class="row">
                       <div class="col-4">
                         <label for="nick">Nickname</label>
-                        <input type="text" class="form-control" id="nick" name="nickname" placeholder="Nickname">
+                        <input type="text" class="form-control" id="nick" name="nick">
                       </div>
                       <div class="col-4">
                         <label for="dni">D.N.I</label>
-                        <input type="text" class="form-control" id="dni" name="documento" placeholder="D.N.I">
+                        <input type="text" class="form-control" id="dni" name="dni">
                       </div>
                     </div>
                   </div>
@@ -176,7 +180,7 @@
                               <i class="far fa-calendar-alt"></i>
                             </span>
                           </div>
-                          <input type="date" id="start" name="trip-start" id="fechaNac" name="fechaDeNacimiento">
+                          <input type="date" id="start" name="trip-start" id="fechaNac" name="fechaNac">
                         </div>
                       </div>
                       <div class="col-4">
@@ -199,9 +203,7 @@
                             <label class="form-check-label" for="nb2">Cualquier pronombre</label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="pronoun" id="otro" value="otro">
-                            <label class="form-check-label" for="otro">Otro:</label>
-                            <input type="text" name="pronoun" id="otro">
+                            <input class="form-check-input" type="radio" name="pronoun" id="otro" value="otro"> Otro:<input type="text" name="otroPronoun" id="otro">
                           </div>
                         </div>
                       </div>
@@ -219,15 +221,15 @@
                       <div class="row">
                         <div class="col-4">
                           <label for="direc">Dirección</label>
-                          <input type="text" class="form-control" id="direc" name="direccion" placeholder="Domicilio">
+                          <input type="text" class="form-control" id="direc" name="direc">
                         </div>
                         <div class="col-4">
                           <label for="barr">Barrio</label>
-                          <input type="text" class="form-control" id="barr" name="barrio" placeholder="Barrio">
+                          <input type="text" class="form-control" id="barr" name="barr">
                         </div>
                         <div class="col-4">
                           <label for="local">Localidad</label>
-                          <input type="text" class="form-control" id="local" name="localidad" placeholder="Localidad">
+                          <input type="text" class="form-control" id="local" name="local">
                         </div>
                       </div>
                     </div>
@@ -242,15 +244,15 @@
                     <div class="row">
                       <div class="col-4">
                         <label for="tel">Teléfono</label>
-                        <input type="text" class="form-control" id="tel" name="telefono" placeholder="Teléfono">
+                        <input type="text" class="form-control" id="tel" name="tel">
                       </div>
                       <div class="col-4">
                         <label for="rrss">Redes sociales</label>
-                        <input type="text" class="form-control" id="rrss" name="redesSociales" placeholder="@user">
+                        <input type="text" class="form-control" id="rrss" name="rrss">
                       </div>
                       <div class="col-4">
                         <label for="mail">Email</label>
-                        <input type="email" class="form-control" id="mail" name="email" placeholder="Email">
+                        <input type="email" class="form-control" id="mail" name="mail">
                       </div>
                     </div>
                   </div>
@@ -270,14 +272,14 @@
                 <div class="row">
                   <div class="col-8">
                     <label for="esc">Escuela</label>
-                    <input type="name" class="form-control" id="esc" name="escuela" placeholder="Escuela">
+                    <input type="name" class="form-control" id="esc" name="esc">
                   </div>
               </div>
               <div class="row">
                 <div class="col-sm-6">
                   <div class="form-group">
                     <label for="carr">Seleccionar Carrera</label>
-                    <select class="form-control" id="carr" name="carrera">
+                    <select class="form-control" id="carr" name="carr">
                       <option value="prog">Programación</option>
                       <option value="3D">3D</option>
                       <option value="foto">Fotografía</option>

@@ -63,29 +63,8 @@
   "bugs": {
     "url": "https://github.com/ColorlibHQ/AdminLTE/issues"
   },
-  "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.4",
-    "@sweetalert2/theme-bootstrap-4": "^5.0.10",
-    "@ttskch/select2-bootstrap4-theme": "^1.5.2",
-    "bootstrap": "^4.6.1",
-    "bootstrap-colorpicker": "^3.4.0",
-    "bootstrap-slider": "^11.0.2",
-    "bootstrap-switch": "3.3.4",
-    "bootstrap4-duallistbox": "^4.0.2",
-    "fullcalendar": "^5.11.0",
-    "icheck-bootstrap": "^3.0.1",
-    "jquery": "^3.6.0",
-    "jquery-knob-chif": "^1.2.13",
-    "jquery-mapael": "^2.2.0",
-    "jquery-mousewheel": "^3.1.13",
-    "jquery-ui-dist": "^1.13.1",
-    "jquery-validation": "^1.19.3",
-    "jqvmap-novulnerability": "^1.5.1",
-    "jsgrid": "^1.5.3",
-    "jszip": "^3.9.1"
-  },
   "devDependencies": {
     "nodemon": "^2.0.16",
-    "typescript": "^4.7.2"
+    "typescript": "^4.7.4"
   }
 }

@@ -122,11 +122,11 @@
                   <div class="row">
                     <div class="col-4">
                       <label for="nombre">Nombre</label>
-                      <input type="text" class="form-control" id="nombre" name="nombre">
+                      <input type="text" class="form-control" id="nombre" name="nombre" required>
                     </div>
                     <div class="col-4">
                       <label for="apellido">Apellido</label>
-                      <input type="text" class="form-control" id="apellido" name="apellido">
+                      <input type="text" class="form-control" id="apellido" name="apellido" required>
                     </div>
                   </div>
                   <div class="card-body">
@@ -137,7 +137,7 @@
                       </div>
                       <div class="col-4">
                         <label for="dni">D.N.I</label>
-                        <input type="text" class="form-control" id="dni" name="dni">
+                        <input type="text" class="form-control" id="dni" name="dni" required>
                       </div>
                     </div>
                   </div>
@@ -151,7 +151,7 @@
                               <i class="far fa-calendar-alt"></i>
                             </span>
                           </div>
-                          <input type="date" id="fechaNac" name="fechaNac">
+                          <input type="date" id="fechaNac" name="fechaNac" required>
                         </div>
                       </div>
                       <div class="col-4">
@@ -191,16 +191,16 @@
                     <div class="card-body">
                       <div class="row">
                         <div class="col-4">
-                          <label for="direc">Dirección</label>
-                          <input type="text" class="form-control" id="direc" name="direc">
+                          <label for="direccion">Dirección</label>
+                          <input type="text" class="form-control" id="direccion" name="direccion" required>
                         </div>
                         <div class="col-4">
-                          <label for="barr">Barrio</label>
-                          <input type="text" class="form-control" id="barr" name="barr">
+                          <label for="barrio">Barrio</label>
+                          <input type="text" class="form-control" id="barrio" name="barrio" required>
                         </div>
                         <div class="col-4">
-                          <label for="local">Localidad</label>
-                          <input type="text" class="form-control" id="local" name="local">
+                          <label for="localidad">Localidad</label>
+                          <input type="text" class="form-control" id="localidad" name="localidad" required>
                         </div>
                       </div>
                     </div>
@@ -215,15 +215,15 @@
                     <div class="row">
                       <div class="col-4">
                         <label for="tel">Teléfono</label>
-                        <input type="text" class="form-control" id="tel" name="tel">
+                        <input type="text" class="form-control" id="tel" name="tel" required>
                       </div>
                       <div class="col-4">
-                        <label for="rrss">Redes sociales</label>
-                        <input type="text" class="form-control" id="rrss" name="rrss">
+                        <label for="redes">Redes sociales</label>
+                        <input type="text" class="form-control" id="redes" name="redes">
                       </div>
                       <div class="col-4">
                         <label for="mail">Email</label>
-                        <input type="email" class="form-control" id="mail" name="mail">
+                        <input type="email" class="form-control" id="mail" name="mail" required>
                       </div>
                     </div>
                   </div>
@@ -249,8 +249,8 @@
               <div class="row">
                 <div class="col-sm-6">
                   <div class="form-group">
-                    <label for="carr">Seleccionar Carrera</label>
-                    <select class="form-control" id="carr" name="carr">
+                    <label for="carrera">Seleccionar Carrera</label>
+                    <select class="form-control" id="carrera" name="carrera">
                       <option value="prog">Programación</option>
                       <option value="3D">3D</option>
                       <option value="foto">Fotografía</option>
@@ -269,18 +269,22 @@
             <div class="card-header">
               <h3 class="card-title">Datos de tutor</h3>
             </div>
-              <div class="card-body">
-                <div class="row">
-                  <div class="col-8">
-                    <label for="nomTutor">Nombre y apellido del tutor</label>
-                    <input type="text" class="form-control" id="nomTutor" name="nomTutor">
-                  </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-4">
+                  <label for="nombreTutor">Nombre del tutor:</label>
+                  <input type="text" class="form-control" id="nombreTutor" name="nombreTutor">
                 </div>
+                <div class="col-4">
+                  <label for="apellidoTutor">Apellido del tutor:</label>
+                  <input type="text" class="form-control" id="apellidoTutor" name="apellidoTutor">
+                </div>
+              </div>
                 <div class="card-body">
                   <div class="row">
                     <div class="col-4">
-                      <label for="vinc">Vinculo</label>
-                      <input type="text" class="form-control" id="vinc" name="vinc">
+                      <label for="vinculo">Vinculo</label>
+                      <input type="text" class="form-control" id="vinculo" name="vinculo">
                     </div>
                     <div class="col-4">
                       <label for="telTutor">Teléfono</label>

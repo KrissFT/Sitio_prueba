@@ -1,6 +1,7 @@
 import { Socie } from "./models/socie.model";
 // 1. Select the div element using the id property
 const app = document.getElementById("app");
+const table = document.getElementById("socies-table");
 let socies: Array<Socie>=[
     {
         nombre: 'Lukas',
@@ -36,5 +37,5 @@ socies.forEach(socie => {
     tr?.appendChild(td_apellido);
     tr?.appendChild(td_nick);
     tr?.appendChild(td_edad);
-    app?.appendChild(tr);
+    table?.appendChild(tr);
  });

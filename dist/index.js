@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 // 1. Select the div element using the id property
 const app = document.getElementById("app");
+const table = document.getElementById("socies-table");
 let socies = [
     {
         nombre: 'Lukas',
@@ -31,5 +32,5 @@ socies.forEach(socie => {
     tr === null || tr === void 0 ? void 0 : tr.appendChild(td_apellido);
     tr === null || tr === void 0 ? void 0 : tr.appendChild(td_nick);
     tr === null || tr === void 0 ? void 0 : tr.appendChild(td_edad);
-    app === null || app === void 0 ? void 0 : app.appendChild(tr);
+    table === null || table === void 0 ? void 0 : table.appendChild(tr);
 });

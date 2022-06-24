@@ -10,6 +10,24 @@ let socies = [
         nick: 'N/A',
         edad: 20
     },
+    {
+        nombre: 'Lukas',
+        apellido: 'Santillán',
+        nick: 'N/A',
+        edad: 20
+    },
+    {
+        nombre: 'Lukas',
+        apellido: 'Santillán',
+        nick: 'N/A',
+        edad: 20
+    },
+    {
+        nombre: 'Lukas',
+        apellido: 'Santillán',
+        nick: 'N/A',
+        edad: 20
+    },
 ];
 fetch("http://localhost:5000/socies")
     .then(resp => {

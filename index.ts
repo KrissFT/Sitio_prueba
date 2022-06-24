@@ -51,18 +51,29 @@ fetch("http://localhost:5000/socies")
         .then(resp => {
             resp.json()
             .then (data => {
-                let p0 = document.createElement("p");
-                let p1 = document.createElement("p");
-                let p2 = document.createElement("p");
-                let p3 = document.createElement("p");
-                p0.textContent = "Nombre: " + data.socie.nombre
-                p1.textContent = "Apellido: " + data.socie.apellido
-                p2.textContent = "Nick: " + data.socie.nick
-                p3.textContent = "Edad: " + data.socie.edad
-                app?.appendChild(p0);
-                app?.appendChild(p1);
-                app?.appendChild(p2);
-                app?.appendChild(p3);
+                let form = document.createElement("form");
+                // input nombre
+                let input_nombre = document.createElement("input");
+                input_nombre.type = "text";
+                input_nombre.value = socie.nombre;
+                input_nombre.className = "input-edit-socie";
+                // input apellido
+                let input_apellido = document.createElement("input");
+                input_apellido.value = socie.apellido;
+                input_apellido.className = "input-edit-socie";
+                // input nick
+                let input_nick = document.createElement("input");
+                input_nick.value = socie.nick;
+                input_nick.className = "input-edit-socie";
+
+                form.appendChild(input_nombre);
+                form.appendChild(input_apellido);
+                form.appendChild(input_nick);
+
+                let p = document.createElement("p");
+                p.textContent = data.socie.nombre;
+
+                app?.appendChild(form);
             })
         });
     }

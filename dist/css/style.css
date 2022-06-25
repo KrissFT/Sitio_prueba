@@ -2,3 +2,9 @@
     padding: 10px;
     margin: 10px;
 }
+
+.button-show{
+    padding: 5px;
+    margin: 5px;
+    border: 0;
+}

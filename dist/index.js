@@ -26,6 +26,7 @@ fetch("http://localhost:5000/socies")
             td_edad.textContent = socie.edad.toString(10);
             let td_button = document.createElement("button");
             td_button.textContent = "Mostrar";
+            td_button.className = "button-show";
             td_button.onclick = function () {
                 showSocie(socie);
             };
@@ -49,14 +50,17 @@ function showSocie(socie) {
             input_nombre.type = "text";
             input_nombre.value = socie.nombre;
             input_nombre.className = "input-edit-socie";
+            input_nombre.disabled = true;
             // input apellido
             let input_apellido = document.createElement("input");
             input_apellido.value = socie.apellido;
             input_apellido.className = "input-edit-socie";
+            input_apellido.disabled = true;
             // input nick
             let input_nick = document.createElement("input");
             input_nick.value = socie.nick;
             input_nick.className = "input-edit-socie";
+            input_nick.disabled = true;
             form.appendChild(input_nombre);
             form.appendChild(input_apellido);
             form.appendChild(input_nick);

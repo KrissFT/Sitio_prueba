@@ -69,10 +69,16 @@ fetch("http://localhost:5000/socies")
                 input_nick.value = socie.nick;
                 input_nick.className = "input-edit-socie";
                 input_nick.disabled = true;
+                //input edad
+                let input_edad = document.createElement("input");
+                input_edad.value = socie.edad.toString(10);
+                input_edad.className = "input-edit-socie";
+                input_edad.disabled = true;
 
                 form.appendChild(input_nombre);
                 form.appendChild(input_apellido);
                 form.appendChild(input_nick);
+                form.appendChild(input_edad);
 
                 let p = document.createElement("p");
                 p.textContent = data.socie.nombre;

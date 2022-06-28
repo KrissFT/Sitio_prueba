@@ -53,32 +53,79 @@ fetch("http://localhost:5000/socies")
             resp.json()
             .then (data => {
                 let form = document.createElement("form");
+
+                let row0 = document.createElement("row");
+                row0.className = "row"
+                let row1 = document.createElement("row");
+                row1.className = "row"
+                let row2 = document.createElement("row");
+                row2.className = "row"
+                let row3 = document.createElement("row");
+                row3.className = "row"
+
+                let col0 = document.createElement("div");
+                col0.className = "col-4"
+                let col1 = document.createElement("div");
+                col1.className = "col-4"
+                let col2 = document.createElement("div");
+                col2.className = "col-4"
+                let col3 = document.createElement("div");
+                col3.className = "col-4"
+                //label nombre
+                let label_nombre = document.createElement("label");
+                label_nombre.textContent = "Nombre: "
                 // input nombre
                 let input_nombre = document.createElement("input");
                 input_nombre.type = "text";
                 input_nombre.value = socie.nombre;
                 input_nombre.className = "input-edit-socie";
                 input_nombre.disabled = true;
+                //label apellido
+                let label_apellido = document.createElement("label");
+                label_apellido.textContent = "Apellido: "
                 // input apellido
                 let input_apellido = document.createElement("input");
                 input_apellido.value = socie.apellido;
                 input_apellido.className = "input-edit-socie";
                 input_apellido.disabled = true;
+                //label nick
+                let label_nick = document.createElement("label");
+                label_nick.textContent = "Nickname: "
                 // input nick
                 let input_nick = document.createElement("input");
                 input_nick.value = socie.nick;
                 input_nick.className = "input-edit-socie";
                 input_nick.disabled = true;
+                //label edad
+                let label_edad = document.createElement("label");
+                label_edad.textContent = "Edad: "
                 //input edad
                 let input_edad = document.createElement("input");
                 input_edad.value = socie.edad.toString(10);
                 input_edad.className = "input-edit-socie";
                 input_edad.disabled = true;
 
-                form.appendChild(input_nombre);
-                form.appendChild(input_apellido);
-                form.appendChild(input_nick);
-                form.appendChild(input_edad);
+                col0.appendChild(label_nombre);
+                col0.appendChild(input_nombre);
+                col1.appendChild(label_apellido);
+                col1.appendChild(input_apellido);
+                col2.appendChild(label_nick);
+                col2.appendChild(input_nick);
+                col3.appendChild(label_edad);
+                col3.appendChild(input_edad);
+                //form.appendChild(input_nombre);
+                //form.appendChild(input_apellido);
+                //form.appendChild(input_nick);
+                //form.appendChild(input_edad);
+                row0.appendChild(col0);
+                row1.appendChild(col1);
+                row2.appendChild(col2);
+                row3.appendChild(col3);
+
+                form.appendChild(row0);
+                form.appendChild(row1);
+                form.appendChild(row2);
+                form.appendChild(row3);
 
                 let p = document.createElement("p");
                 p.textContent = data.socie.nombre;

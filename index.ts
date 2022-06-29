@@ -5,47 +5,60 @@ const table = document.getElementById("socies-table");
 let socies: Array<Socie>=[];
 let socie: Socie;
 
-fetch("http://localhost:5000/socies")
-    .then(resp => {
-        resp.json()
-        .then (data => {
-            socies = data.socies
-            socies.forEach((socie:Socie) => {
-                let tr = document.createElement("tr");
 
-                let link = document.createElement("a");
-                link.href = "http://localhost:5000/socie/"+ socie.nick;
-                link.innerText = socie.nombre;
-                
-                let td_nombre = document.createElement("td");
-                //td_nombre.textContent = socie.nombre;
-                td_nombre.appendChild(link);
+/**
+ * 
+ * Funcion principal autoload
+ */
+ fetch("http://localhost:5000/socies")
+ .then(resp => {
+     resp.json()
+     .then (data => {
+         socies = data.socies;
+         completarGrilla(socies);
+     })
+ });
 
-                let td_apellido = document.createElement("td");
-                td_apellido.textContent = socie.apellido;
-            
-                let td_nick = document.createElement("td");
-                td_nick.textContent = socie.nick;
-            
-                let td_edad = document.createElement("td");
-                td_edad.textContent = socie.edad.toString(10);
 
-                let td_button = document.createElement("button");
-                td_button.textContent = "Mostrar";
-                td_button.className = "button-show";
-                td_button.onclick = function() {
-                    showSocie(socie);
-                };
-            
-                tr?.appendChild(td_nombre);
-                tr?.appendChild(td_apellido);
-                tr?.appendChild(td_nick);
-                tr?.appendChild(td_edad);
-                tr?.appendChild(td_button);
-                table?.appendChild(tr);
-             });
-        })
-    });
+
+function completarGrilla(socies: Array<Socie>): void {
+    socies.forEach((socie:Socie) => {
+        let tr = document.createElement("tr");
+
+        let link = document.createElement("a");
+        link.href = "http://localhost:5000/socie/"+ socie.nick;
+        link.innerText = socie.nombre;
+        
+        let td_nombre = document.createElement("td");
+        //td_nombre.textContent = socie.nombre;
+        td_nombre.appendChild(link);
+
+        let td_apellido = document.createElement("td");
+        td_apellido.textContent = socie.apellido;
+    
+        let td_nick = document.createElement("td");
+        td_nick.textContent = socie.nick;
+    
+        let td_edad = document.createElement("td");
+        td_edad.textContent = socie.edad.toString(10);
+
+        let td_button = document.createElement("button");
+        td_button.textContent = "Mostrar";
+        td_button.className = "button-show";
+        td_button.onclick = function() {
+            showSocie(socie);
+        };
+    
+        tr?.appendChild(td_nombre);
+        tr?.appendChild(td_apellido);
+        tr?.appendChild(td_nick);
+        tr?.appendChild(td_edad);
+        tr?.appendChild(td_button);
+        table?.appendChild(tr);
+     });
+}
+
+
 
     function showSocie (socie:Socie){
         fetch("http://localhost:5000/socie/"+socie.nick)
@@ -79,7 +92,7 @@ fetch("http://localhost:5000/socies")
                 input_nombre.type = "text";
                 input_nombre.value = socie.nombre;
                 input_nombre.className = "input-edit-socie";
-                input_nombre.disabled = true;
+                input_nombre.name = "nombre";
                 //label apellido
                 let label_apellido = document.createElement("label");
                 label_apellido.textContent = "Apellido: "
@@ -87,7 +100,7 @@ fetch("http://localhost:5000/socies")
                 let input_apellido = document.createElement("input");
                 input_apellido.value = socie.apellido;
                 input_apellido.className = "input-edit-socie";
-                input_apellido.disabled = true;
+                input_apellido.name = "apellido"
                 //label nick
                 let label_nick = document.createElement("label");
                 label_nick.textContent = "Nickname: "
@@ -95,7 +108,7 @@ fetch("http://localhost:5000/socies")
                 let input_nick = document.createElement("input");
                 input_nick.value = socie.nick;
                 input_nick.className = "input-edit-socie";
-                input_nick.disabled = true;
+                input_nick.name = "nick";
                 //label edad
                 let label_edad = document.createElement("label");
                 label_edad.textContent = "Edad: "
@@ -103,7 +116,17 @@ fetch("http://localhost:5000/socies")
                 let input_edad = document.createElement("input");
                 input_edad.value = socie.edad.toString(10);
                 input_edad.className = "input-edit-socie";
-                input_edad.disabled = true;
+                input_edad.name = "edad";
+                //botón
+                let button = document.createElement("button");
+                button.type = "submit";
+                button.className = "btn btn-info";
+                button.textContent = "Actualizar";
+                button.formAction = "http://localhost:5000/edit-socie/"+socie.nick;
+                button.formMethod = "post";
+                button.onclick = function() {
+                    completarGrilla(socies)
+                }
 
                 col0.appendChild(label_nombre);
                 col0.appendChild(input_nombre);
@@ -113,10 +136,6 @@ fetch("http://localhost:5000/socies")
                 col2.appendChild(input_nick);
                 col3.appendChild(label_edad);
                 col3.appendChild(input_edad);
-                //form.appendChild(input_nombre);
-                //form.appendChild(input_apellido);
-                //form.appendChild(input_nick);
-                //form.appendChild(input_edad);
                 row0.appendChild(col0);
                 row1.appendChild(col1);
                 row2.appendChild(col2);
@@ -126,11 +145,9 @@ fetch("http://localhost:5000/socies")
                 form.appendChild(row1);
                 form.appendChild(row2);
                 form.appendChild(row3);
+                form.appendChild(button);
 
-                let p = document.createElement("p");
-                p.textContent = data.socie.nombre;
-
-                app?.appendChild(form);
+                app?.replaceChildren(form);
             })
         });
     }
